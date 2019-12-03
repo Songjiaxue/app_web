@@ -1,0 +1,129 @@
+@import '../../assets/less/color';
+.app-work{
+  width: 13rem;
+  // max-width: 1200px;
+  margin: 0 auto;
+  &-main{
+    text-align: center;
+    margin-top: 1rem;
+    display: flex;
+    .item{
+      display: inline-block;
+      margin: .5rem .4rem;
+      flex: 1;
+      cursor: pointer;
+      &-wrap{
+        border: 1px solid fade(@text-color, 50%);
+        padding: 1rem 0 .8rem;
+        img{
+          width: 100%;
+          display: block;
+        }
+      }
+      &-footer{
+        margin-top: .1rem;
+        cursor: pointer;
+      }
+      &-footer:before,&-footer:after{
+        content: '';
+				display: inline-block;
+				border-radius: 50%;
+				background-color: @text-color;
+				margin: 0 .1rem;
+				padding: .04rem;
+      }
+      .border-top{
+        margin-top: -1.15rem;
+        text-align: center;
+        >div{
+          display: inline-block;
+        }
+        .space{
+          width: .4rem;
+          height: .2rem;
+          background-color: #fff;
+          margin: 0 .2rem;
+        }
+        .square-wrap{
+          padding: 0 .2rem;
+          background-color: #fff;
+        }
+        .square{
+          border: 1px solid fade(@text-color, 50%);
+          padding: .04rem;
+          background-color: #fff;
+          transform: rotate(45deg);
+          .in{
+            background-color: fade(@text-color,70%);
+            width: .1rem;
+            height: .1rem;
+          }
+        }
+      }
+    }
+    .item.active, .item:hover{
+      .item-wrap{
+        border: 1px solid @warn-color;
+      }
+      .border-top{
+        .square{
+          border: 1px solid @warn-color;
+          .in{
+            background-color: @warn-color;
+          }
+        }
+      }
+    }
+  }
+  &-page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: .8rem;
+    div{
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      span{
+        margin: 0 .1rem;
+      }
+    }
+    .back{
+      margin-right: 2rem;
+      cursor: pointer;
+    }
+    .right{
+      margin-left: 2rem;
+      cursor: pointer;
+    }
+  }
+}
+
+@media screen and (min-width: 1800px) and (max-width: 1930px) {
+  div.app-work {
+    width: 13rem;
+    .app-work-main{
+      margin-top: .5rem;
+    }
+    
+  }
+}
+@media screen and (min-width: 1280px) and (max-width: 1800px) {
+  div.app-work {
+    width: 15rem;
+    .app-work-main{
+      margin-top: 1.5rem;
+    }
+  }
+}
+@media screen and (max-width: 1280px) {
+  div.app-work {
+    width: 15rem;
+    .app-work-main{
+      margin-top: 2rem;
+    }
+    .app-work-page{
+      margin-top: 2rem;
+    }
+  }
+}

@@ -1,0 +1,71 @@
+/* 编辑器配置 */
+{
+  "editor.fontSize": 16,
+  "editor.formatOnPaste": false,
+  "editor.formatOnSave": false,
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "editor.formatOnType": false,
+  // "editor.renderControlCharacters": true,
+  "editor.tabCompletion": "on",
+  // "editor.hideCursorInOverviewRuler": true,
+  "editor.tabSize": 2,
+  "editor.mouseWheelZoom": true,
+  "editor.multiCursorModifier": "ctrlCmd",
+  "editor.snippetSuggestions": "top",
+  "editor.fontLigatures": true,
+  "editor.foldingStrategy": "auto",
+  "editor.matchBrackets": true,
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  /* 文件头配置 */
+
+  /* emmet自动补全配置 */
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.includeLanguages": {
+    "vue-html": "html",
+    "javascript": "javascriptreact",
+    "vue": "html"
+  },
+  "emmet.syntaxProfiles": {
+    "vue-html": "html",
+    "vue": "html"
+  },
+  "emmet.showSuggestionsAsSnippets": true,
+
+  /* eslint插件配置 */
+  "eslint.enable": true,
+  "eslint.autoFixOnSave": true,
+  "eslint.alwaysShowStatus": true,
+  // "eslint.nodePath": "c:\\Users\\node_modules",//这个会防止项目打开其他项目文件时路径改变，导致eslint不会出现提示，最好将此设置为工作区中
+  "eslint.run": "onType",
+  "eslint.validate": [
+    {
+      "language": "javascript",
+      "autoFix": true
+    },
+    "javascriptreact",
+    "jsx",
+    {
+      "language": "html",
+      "autoFix": true
+    },
+    {
+      "language": "vue",
+      "autoFix": true
+    }
+  ],
+
+  "auto-close-tag.SublimeText3Mode": true,
+  "auto-close-tag.fullMode": true,
+
+  /* prettier格式化插件配置 */
+  "prettier.jsxBracketSameLine": false,
+  "prettier.semi": true, // 句尾添加分号
+  "prettier.printWidth": 150,
+  "prettier.singleQuote": false,
+}
+

@@ -1,0 +1,28 @@
+@import '../../../assets/less/color';
+.app-note{
+  &-main{
+    width: 50%;
+    margin: 1rem auto;
+
+    .item{
+      margin-bottom: .3rem;
+      .title{
+        font-weight: bold;
+        font-size: 16px;
+        margin: .2rem 0 .1rem 0;
+      }
+      .line{
+        width: 40px;
+        height: 1px;
+        background-color: @text-color;
+      }
+      .link{
+        font-size: 12px;
+        margin-top: .05rem;
+        a{
+          color: @warn-color
+        }
+      }
+    }
+  }
+}

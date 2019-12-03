@@ -1,0 +1,54 @@
+@import '../../assets/less/color';
+.app-mine{
+  &-main{
+    width: 60%;
+    margin: 1rem auto;
+    background-color: fade(@text-color,2%);
+    padding: .4rem;
+    display: flex;
+    p{
+      line-height: 2;
+    }
+    >div{
+      flex: 1;
+    }
+    .main-title{
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: .3rem;
+    }
+    .main-left{
+      box-shadow: 1px 0 0 0 fade(@text-color, 20%);
+      &-in{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .img-wrap{
+          border-radius: 50%;
+          width: 1rem;
+          height: 1rem;
+          overflow: hidden;
+          margin-right: .5rem;
+          img{
+            width: 100%;
+          }
+        }
+        
+        .label{
+          font-weight: bold;
+          margin-right: .2rem;
+        }
+      }
+    }
+    .main-right{
+      &-in{
+        padding: 0 .4rem;
+      }
+      p{
+        display: flex;
+        align-items: center;
+        // justify-content: center;
+      }
+    }
+  }
+}

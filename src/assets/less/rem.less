@@ -1,0 +1,49 @@
+// 变量
+// 适配主流设备
+// @adapterDeviceList:320px,360px,375px,384px,400px,414px,424px,480px,540px,640px,720px,750px;
+@adapterDeviceList: 1024px, 1280px, 1366px, 1440px, 1680px, 1920px;
+// 设备的种类
+@len: length(@adapterDeviceList);
+// 预设基准值
+@baseFontSize: 100px;
+// 设计稿尺寸
+@psdWidth: 1920px;
+
+// 混入
+// less中的index是从1开始的，比起索引，应该叫做序号
+.adapterMixin(@index: 1) when (@index <= @len) {
+  @media (min-width: extract(@adapterDeviceList, @index)) {
+    html{
+      font-size: @baseFontSize / @psdWidth * extract(@adapterDeviceList, @index) !important;
+    }
+  }
+  .adapterMixin(@index+1);
+}
+
+// 适配
+.adapterMixin();
+
+// 字体大小
+@media screen and (min-width: 1680px) and (max-width: 1920px) {
+  body {
+    font-size: 14px !important;
+  }
+}
+@media screen and (min-width: 1440px) and (max-width: 1680px) {
+  body {
+    font-size: 13px !important;
+  }
+}
+@media screen and (max-width: 1440px) {
+  body {
+    font-size: 12px !important;
+  }
+}
+
+
+
+
+// 最小宽度
+// body{
+//   min-width: 1355px;
+// }

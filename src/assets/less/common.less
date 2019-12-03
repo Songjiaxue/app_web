@@ -1,0 +1,100 @@
+@import './color';
+html{
+	font-size: 1000px / (1920 / 100);
+	min-width: 1000px;
+}
+body {
+	margin: 0;
+	color: @text-color;
+	background-color: @bg-color;
+	.app{
+		padding: .2rem;
+		p{
+			// text-align: center;
+			margin-bottom: 0;
+		}
+		&-title{
+			text-align: center;
+			margin-top: .5rem;
+			.main{
+				font-size: .2rem;
+				font-weight: bold;
+			}
+			.sub{
+				margin: .1rem 0;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+			}
+			.sub:before,.sub:after{
+				content: '';
+				display: inline-block;
+				border-radius: 50%;
+				background-color: @text-color;
+				margin: 0 .2rem;
+				padding: .04rem;
+			}
+			.desc{
+				border: 1px solid fade(@text-color, 50%);
+				display: inline-block;
+				padding: .02rem .8rem;
+			}
+		}
+		&-footer{
+			background-color: @text-color;
+			height: .2rem;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+		}
+		&-logo{
+			font-size: .2rem;
+			text-transform: uppercase;  
+			font-weight: bold;
+			color: @text-color;
+		}
+		.icon {
+			width: 1.6em; height: 1.6em;
+			vertical-align: -0.15em;
+			fill: currentColor;
+			overflow: hidden;
+			cursor: pointer;
+			display: inline-block;
+			margin-right: .1rem;
+	 }
+	 	&-fixed{
+		position: absolute;
+		left:.2rem;
+		top: 40%;
+		transform: translate(0, -50%);
+		.icon{
+			display: block;
+		}
+		.icon:not(:first-child){
+			margin-top: .1rem;
+		}
+		.home-icon{
+			color: @home-color;
+		}
+		.work-icon{
+			color: @work-color;
+		}
+		.collection-icon{
+			color: @collection-color;
+		}
+		.user-icon{
+			color: @user-color;
+		}
+		}
+		&-back{
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-top: 1rem;
+			margin-bottom: .5rem;
+			text-align: center;
+			cursor: pointer;
+		}
+	}
+}

@@ -1,0 +1,76 @@
+@import '../../assets/less/color';
+.app-calendar{
+  color: @text-color;
+  width: 80%;
+  margin: .4rem auto;
+  &-title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: .1rem 0;
+    .title-icon{
+      flex-basis: 1rem;
+      color: @text-color;
+      cursor: pointer;
+    }
+    .title-in{
+      flex: 1;
+      cursor: pointer;
+    }
+  }
+  &-week{
+    display: flex;
+    height: .8rem;
+    align-items: center;
+    border-bottom: 1px solid fade(@text-color, 20%);
+    >div{
+      flex: 1;
+      text-align: center;
+    }
+  }
+  &-day{
+    padding: .2rem 0;
+    cursor: pointer;
+    .row{
+      text-align: center;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      align-items: center;
+    }
+    .col{
+      flex: 1;
+      min-width: (1 / 7) * 100%;
+      max-width: (1 / 7) * 100%;
+      line-height: .8rem;
+      position: relative;
+      .active{
+        background-color: @text-color;
+        width: 0.4rem;
+        height: 0.4rem;
+        border-radius: 50%;
+        display: inline-block;
+        line-height: .4rem;
+        text-align: center;
+        color: #fff;
+      }
+    }
+    
+    .disable{
+      color: #cdcdcf;
+    }
+    .extra:after{
+      content: '';
+      position: absolute;
+      width: 0.08rem;
+      height: 0.08rem;
+      background-color: @warn-color;
+      border-radius: 50%;
+      bottom: 0;
+      left: 50%;
+      transform: translate(-50%,0);
+      display: inline-block;
+    }
+  }
+}

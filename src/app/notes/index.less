@@ -1,0 +1,85 @@
+@import '../../assets/less/color';
+.app-notes{
+  width: 15rem;
+  margin: 0 auto;
+  &-main{
+    display: flex;
+    flex: 1;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    .item{
+      position: relative;
+      flex: 1;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      &-bg{
+        padding: .2rem;
+        border: 1px solid @text-color;
+        position: absolute;
+        left: 50%;
+        margin-left: -1.2rem;
+        z-index: -1;
+        transform: rotate(45deg);
+      }
+      &-in{
+        width: 2rem;
+        height: 2rem;
+        background-color: @text-color;
+      }
+      &-content{
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 2rem;
+        height: 2rem;
+        color: #fff;
+        font-size: .3rem;
+      }
+      
+    }
+    
+  }
+  &-desc{
+    margin-top: 2rem;
+    text-align: center;
+    .desc-wrap{
+      display: inline-flex;
+      p{
+        text-align: left;
+        margin-bottom: .1rem;
+        img{
+          width: .3rem;
+          margin: 0 .2rem;
+        }
+      }
+    }
+    .label{
+      margin-bottom: .1rem;
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) and (max-width: 1800px) {
+  div.app-notes {
+    .app-notes-main{
+      margin-top: 3rem;
+    }
+    .app-notes-desc{
+      margin-top: 4rem;
+    }
+  }
+}
+@media screen and (max-width: 1280px) {
+  div.app-notes {
+    .app-notes-main{
+      margin-top: 4rem;
+    }
+    .app-notes-desc{
+      margin-top: 5rem;
+    }
+  }
+}
