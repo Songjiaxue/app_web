@@ -26,7 +26,7 @@ class AppWork extends Component {
         },
         {
           img: QIONGLAI,
-          desc: "邛崃市民云（线上作品）",
+          desc: "邛崃市民云（线上）",
           link: "https://smy.qionglai.gov.cn/wechat/?appType=wechat#/",
           type: "phone",
         },
