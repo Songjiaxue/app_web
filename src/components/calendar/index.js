@@ -122,7 +122,7 @@ class Calendar extends React.Component {
               }`;
               return dis ? (
                 <div
-                  key={i}
+                  key={v}
                   className="disable col"
                   style={{
                     lineHeight,
@@ -132,7 +132,7 @@ class Calendar extends React.Component {
                 </div>
               ) : (
                 <div
-                  key={i}
+                  key={v}
                   className="col"
                   onClick={() => {
                     this.selectDay(v);
@@ -157,7 +157,6 @@ Calendar.propTypes = {
 };
 Calendar.defaultProps = {
   lineHeight: ".8rem",
-  onChange: () => {},
 };
 
 export default Calendar;

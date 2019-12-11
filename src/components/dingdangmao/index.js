@@ -10,69 +10,69 @@ class index extends Component {
   render() {
     return (
       <div>
-        <div class="_index">
+        <div className="_index">
           {/* 头 */}
-          <div class="head">
+          <div className="head">
             {/* 脸 */}
-            <div class="face">
+            <div className="face">
               {/* 眼睛 */}
-              <div class="eye">
-                <div class="left_eye">
-                  <div class="left_eye_ball"></div>
+              <div className="eye">
+                <div className="left_eye">
+                  <div className="left_eye_ball" />
                 </div>
-                <div class="right_eye">
-                  <div class="right_eye_ball"></div>
+                <div className="right_eye">
+                  <div className="right_eye_ball" />
                 </div>
               </div>
               {/* 鼻子 */}
-              <div class="nose"></div>
+              <div className="nose" />
               {/* 鼻线 */}
-              <div class="nose_line"></div>
+              <div className="nose_line" />
               {/* 嘴 */}
-              <div class="mouse"></div>
+              <div className="mouse" />
               {/* 胡须 */}
-              <div class="mustache">
-                <div class="mustache-left">
-                  <div class="mustache-item"></div>
-                  <div class="mustache-item"></div>
-                  <div class="mustache-item"></div>
+              <div className="mustache">
+                <div className="mustache-left">
+                  <div className="mustache-item" />
+                  <div className="mustache-item" />
+                  <div className="mustache-item" />
                 </div>
-                <div class="mustache-right">
-                  <div class="mustache-item"></div>
-                  <div class="mustache-item"></div>
-                  <div class="mustache-item"></div>
+                <div className="mustache-right">
+                  <div className="mustache-item" />
+                  <div className="mustache-item" />
+                  <div className="mustache-item" />
                 </div>
               </div>
             </div>
           </div>
           {/* 脖子 */}
-          <div class="neck">
+          <div className="neck">
             {/* 铃铛 */}
-            <div class="ring">
-              <div class="ring-line"></div>
+            <div className="ring">
+              <div className="ring-line" />
             </div>
           </div>
           {/* 身体 */}
-          <div class="body">
+          <div className="body">
             {/* 手 */}
-            <div class="hand">
-              <div class="hand-left">
-                <div class="hand-ball"></div>
-                <div class="hand-bounch"></div>
+            <div className="hand">
+              <div className="hand-left">
+                <div className="hand-ball" />
+                <div className="hand-bounch" />
               </div>
-              <div class="hand-right">
-                <div class="hand-ball"></div>
-                <div class="hand-bounch"></div>
+              <div className="hand-right">
+                <div className="hand-ball" />
+                <div className="hand-bounch" />
               </div>
             </div>
             {/* 脚 */}
-            <div class="foot">
-              <div class="foot-left"></div>
-              <div class="foot-right"></div>
+            <div className="foot">
+              <div className="foot-left" />
+              <div className="foot-right" />
             </div>
             {/* 口袋 */}
-            <div class="pocket">
-              <div class="pocket-in"></div>
+            <div className="pocket">
+              <div className="pocket-in" />
             </div>
           </div>
         </div>

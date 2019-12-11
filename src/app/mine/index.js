@@ -1,9 +1,9 @@
-import React, { Component } from "react";
+import React, { PureComponent } from "react";
 import HEAD from "@assets/images/head.jpg";
 import Icon from "@components/icon";
 import "./index.less";
 
-class AppMine extends Component {
+class AppMine extends PureComponent {
   render() {
     return (
       <div className="app-mine">
@@ -25,8 +25,6 @@ class AppMine extends Component {
                 <p>宋佳雪</p>
                 <p>1995.2.8</p>
                 <p>浙江工商大学</p>
-                <p>计算机与信息工程学院</p>
-                <p>电子商务</p>
               </div>
             </div>
           </div>
@@ -40,6 +38,10 @@ class AppMine extends Component {
               <p>
                 <Icon type="icon-email" />
                 <span className="value">457191858@qq.com</span>
+              </p>
+              <p>
+                <Icon type="icon-dingwei" />
+                <span className="value">四川成都</span>
               </p>
             </div>
           </div>

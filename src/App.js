@@ -98,7 +98,16 @@ class App extends React.Component {
         </div>
         {/* 底部 */}
         {
-          // <div className="app-footer" />
+          <div className="app-footer">
+            <Icon
+              type="icon-top"
+              className="footer-icon"
+              title="回到顶部"
+              onClick={() => {
+                window.scrollTo(0, 0);
+              }}
+            />
+          </div>
         }
       </div>
     );

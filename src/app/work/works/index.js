@@ -28,6 +28,7 @@ class AppWorks extends Component {
       default:
         break;
     }
+    return null;
   }
 }
 

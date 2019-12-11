@@ -6,6 +6,18 @@ import "./index.less";
 
 @withRouter
 class AppNotes extends Component {
+  types = {
+    1: {
+      title: "css",
+    },
+    2: {
+      title: "javascript",
+    },
+    3: {
+      title: "other",
+    },
+  };
+
   goPage = path => {
     const { history } = this.props;
     history.push(path);
@@ -24,35 +36,22 @@ class AppNotes extends Component {
           </div>
         </div>
         <div className="app-notes-main">
-          <div className="item">
-            <div className="item-bg">
-              <div className="item-in"></div>
+          {Object.keys(this.types).map(v => (
+            <div
+              className="item"
+              key={v}
+              onClick={() => {
+                this.goPage(`/notes/${v}`);
+              }}
+            >
+              <div className="item-bg">
+                <div className="item-in" />
+              </div>
+              <div className="item-content">
+                <p>{this.types[v].title}</p>
+              </div>
             </div>
-            <div className="item-content">
-              <p>css</p>
-            </div>
-          </div>
-          <div
-            className="item"
-            onClick={() => {
-              this.goPage("/notes/2");
-            }}
-          >
-            <div className="item-bg">
-              <div className="item-in"></div>
-            </div>
-            <div className="item-content">
-              <p>JavaScript</p>
-            </div>
-          </div>
-          <div className="item">
-            <div className="item-bg">
-              <div className="item-in"></div>
-            </div>
-            <div className="item-content">
-              <p>other</p>
-            </div>
-          </div>
+          ))}
         </div>
         <div className="app-notes-desc">
           <div className="desc-wrap">
@@ -73,7 +72,7 @@ class AppNotes extends Component {
                 <span>
                   <img src={GITHUB} alt="github" />
                 </span>
-                github:
+                github：
                 <a href={github} target="_blank" rel="noopener noreferrer">
                   https://github.com/Songjiaxue?tab=repositories
                 </a>

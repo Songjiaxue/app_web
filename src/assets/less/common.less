@@ -41,18 +41,18 @@ body {
 			}
 		}
 		&-footer{
-			background-color: @text-color;
-			height: .2rem;
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			right: 0;
+			position: fixed;
+			bottom: 20px;
+			right: 20px;
 		}
 		&-logo{
 			font-size: .2rem;
 			text-transform: uppercase;  
 			font-weight: bold;
 			color: @text-color;
+			position: fixed;
+			top: 20px;
+			left: 20px;
 		}
 		.icon {
 			width: 1.6em; height: 1.6em;
@@ -64,7 +64,7 @@ body {
 			margin-right: .1rem;
 	 }
 	 	&-fixed{
-		position: absolute;
+		position: fixed;
 		left:.2rem;
 		top: 40%;
 		transform: translate(0, -50%);
