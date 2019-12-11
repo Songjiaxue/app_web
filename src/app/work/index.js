@@ -63,17 +63,21 @@ class AppWork extends Component {
 
   goNext = () => {
     const { current, list } = this.state;
-    const allPage = Math.ceil(list / 4);
-    this.setState({
-      current: current + 1 > allPage ? allPage : current + 1,
-    });
+    const allPage = Math.ceil(list.length / 4);
+    if (current < allPage - 1) {
+      this.setState({
+        current: current + 1,
+      });
+    }
   };
 
   goBack = () => {
     const { current } = this.state;
-    this.setState({
-      current: current - 1 <= 0 ? 0 : current - 1,
-    });
+    if (current) {
+      this.setState({
+        current: current - 1 <= 0 ? 0 : current - 1,
+      });
+    }
   };
 
   render() {
