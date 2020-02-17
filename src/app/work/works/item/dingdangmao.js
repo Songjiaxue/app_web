@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import DINGDANGMAO from "@components/dingdangmao";
-import Icon from "@components/icon";
 
 @withRouter
 class Dingdangmao extends Component {
@@ -51,10 +50,6 @@ class Dingdangmao extends Component {
 					<div className="main-right">
 						<DINGDANGMAO />
 					</div>
-				</div>
-				<div className="app-back" onClick={this.goBack}>
-					<Icon type="icon-leftarrow" />
-					<span>返回</span>
 				</div>
 			</div>
 		);

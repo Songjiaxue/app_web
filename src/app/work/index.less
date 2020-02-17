@@ -1,19 +1,19 @@
 @import '../../assets/less/color';
 .app-work{
-  width: 13rem;
+  width: 80%;
   // max-width: 1200px;
   margin: 0 auto;
   &-main{
+    // margin-top: .5rem;
     text-align: center;
-    margin-top: 1rem;
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
     .item{
-      display: inline-block;
-      margin: .5rem .4rem;
+      padding: .5rem .4rem;
       flex: 1;
       cursor: pointer;
       max-width: 25%;
+      min-width: 25%;
       &-wrap{
         border: 1px solid fade(@text-color, 50%);
         padding: 1rem 0 .6rem;
@@ -79,55 +79,5 @@
       }
     }
   }
-  &-page{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: .8rem;
-    div{
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      span{
-        margin: 0 .1rem;
-      }
-    }
-    .back{
-      margin-right: 2rem;
-      cursor: pointer;
-    }
-    .right{
-      margin-left: 2rem;
-      cursor: pointer;
-    }
-  }
 }
 
-@media screen and (min-width: 1800px) and (max-width: 1930px) {
-  div.app-work {
-    width: 13rem;
-    .app-work-main{
-      margin-top: .5rem;
-    }
-    
-  }
-}
-@media screen and (min-width: 1280px) and (max-width: 1800px) {
-  div.app-work {
-    width: 15rem;
-    .app-work-main{
-      margin-top: 1.5rem;
-    }
-  }
-}
-@media screen and (max-width: 1280px) {
-  div.app-work {
-    width: 15rem;
-    .app-work-main{
-      margin-top: 2rem;
-    }
-    .app-work-page{
-      margin-top: 2rem;
-    }
-  }
-}

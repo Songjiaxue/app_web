@@ -67,5 +67,8 @@
   "prettier.semi": true, // 句尾添加分号
   "prettier.printWidth": 150,
   "prettier.singleQuote": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
 }
 

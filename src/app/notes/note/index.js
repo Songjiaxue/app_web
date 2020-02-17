@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
-import Icon from "@components/icon";
 import "./index.less";
 
 @withRouter
@@ -107,11 +106,6 @@ class AppNote extends Component {
     };
   }
 
-  goBack = () => {
-    const { history } = this.props;
-    history.go(-1);
-  };
-
   render() {
     const { type, typeInfo } = this.state;
     return (
@@ -140,10 +134,6 @@ class AppNote extends Component {
               </div>
             </div>
           ))}
-        </div>
-        <div className="app-back" onClick={this.goBack}>
-          <Icon type="icon-leftarrow" />
-          <span>返回</span>
         </div>
       </div>
     );

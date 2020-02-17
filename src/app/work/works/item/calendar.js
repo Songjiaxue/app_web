@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import Calendar from "@components/calendar";
-import Icon from "@components/icon";
 
 @withRouter
 class Dingdangmao extends Component {
@@ -26,9 +25,9 @@ class Dingdangmao extends Component {
             <div>
               <span className="label">部分代码：</span>
               {/* eslint-disable */}
-							<pre>
-								<code>
-									{`// 获取当月天数
+              <pre>
+                <code>
+                  {`// 获取当月天数
 const currentMonthDays = date.daysInMonth(); 
 // 获取当月1日为星期几
 const currentWeekday = date.date(1).weekday() || 7;
@@ -46,21 +45,17 @@ if (daysArr.length % 7) {
     daysArr.push(i);
   }
 }`}
-								</code>
-							</pre>
-						</div>
-					</div>
-					<div className="main-right">
-						<Calendar />
-					</div>
-				</div>
-				<div className="app-back" onClick={this.goBack}>
-					<Icon type="icon-leftarrow" />
-					<span>返回</span>
-				</div>
-			</div>
-		);
-	}
+                </code>
+              </pre>
+            </div>
+          </div>
+          <div className="main-right">
+            <Calendar />
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
 
 export default Dingdangmao;

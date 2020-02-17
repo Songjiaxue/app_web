@@ -100,6 +100,15 @@ class App extends React.Component {
         {
           <div className="app-footer">
             <Icon
+              type="icon-yooxi"
+              className="footer-icon"
+              title="返回"
+              onClick={() => {
+                const { history } = this.props;
+                history.go(-1);
+              }}
+            />
+            <Icon
               type="icon-top"
               className="footer-icon"
               title="回到顶部"

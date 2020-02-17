@@ -44,5 +44,6 @@ module.exports = {
 		"jsx-a11y/no-static-element-interactions": 0,
 		"no-multi-spaces": 0,
 		"react/jsx-no-target-blank": 0,
+		"react/no-array-index-key": 0
 	},
 };

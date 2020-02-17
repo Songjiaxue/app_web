@@ -1,36 +1,33 @@
 @import '../../assets/less/color.less';
-.app-home {
-	&-center {
-		min-width: 100px;
-		position: absolute;
-		top: 45%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		text-align: center;
-		.img-wrap{
-			display: flex;
-			align-items: flex-end;
-		}
-		img {
-			width: 100%;
-			max-width: 2.4rem;
-			cursor: pointer;
-		}
-		.img-b{
-			flex: 11;
-		}
-		.img-s{
-			flex: 3;
-			img{
-				animation: toT 2s infinite;
-				position: relative;
-			}
-		}
-		p{
-			margin-top: .5rem;
+.app-home  {
+	min-width: 100px;
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+	.img-wrap{
+		display: flex;
+		align-items: flex-end;
+	}
+	img {
+		width: 100%;
+		max-width: 2.4rem;
+		cursor: pointer;
+	}
+	.img-b{
+		flex: 11;
+	}
+	.img-s{
+		flex: 3;
+		img{
+			animation: toT 2s infinite;
+			position: relative;
 		}
 	}
-
+	p{
+		margin-top: .5rem;
+	}
 }
 @keyframes toT{
 	0%{

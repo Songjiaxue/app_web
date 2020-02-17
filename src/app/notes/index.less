@@ -1,13 +1,18 @@
 @import '../../assets/less/color';
 .app-notes{
-  width: 15rem;
+  width: 80%;
+  height: 85vh;
   margin: 0 auto;
+  position: relative;
   &-main{
     display: flex;
     flex: 1;
     justify-content: space-between;
     align-items: center;
-    margin-top: 2rem;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    transform: translate(0,-50%);
     .item{
       position: relative;
       flex: 1;
@@ -16,6 +21,7 @@
       align-items: center;
       justify-content: center;
       cursor: pointer;
+      max-width: 350px;
       &-bg{
         padding: .2rem;
         border: 1px solid @text-color;
@@ -43,43 +49,5 @@
     }
     
   }
-  &-desc{
-    margin-top: 2rem;
-    text-align: center;
-    .desc-wrap{
-      display: inline-flex;
-      p{
-        text-align: left;
-        margin-bottom: .1rem;
-        img{
-          width: .2rem;
-          margin: 0 .2rem;
-        }
-      }
-    }
-    .label{
-      margin-bottom: .1rem;
-    }
-  }
 }
 
-@media screen and (min-width: 1280px) and (max-width: 1800px) {
-  div.app-notes {
-    .app-notes-main{
-      margin-top: 3rem;
-    }
-    .app-notes-desc{
-      margin-top: 4rem;
-    }
-  }
-}
-@media screen and (max-width: 1280px) {
-  div.app-notes {
-    .app-notes-main{
-      margin-top: 4rem;
-    }
-    .app-notes-desc{
-      margin-top: 5rem;
-    }
-  }
-}
