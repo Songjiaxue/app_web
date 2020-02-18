@@ -118,13 +118,13 @@ class AppNote extends Component {
           </div>
         </div>
         <div className="app-note-main">
-          {typeInfo[type].list.map(v => (
-            <div className="item" key={v.link}>
+          {typeInfo[type].list.map((v, t) => (
+            <div className="item" key={t}>
               <div className="line" />
               <div className="title">{v.title}</div>
               <div className="content">
                 {(v.content || []).map((r, i) => (
-                  <p key={r}>{r}</p>
+                  <p key={i}>{r}</p>
                 ))}
               </div>
               <div className="link">

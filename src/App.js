@@ -44,6 +44,8 @@ class App extends React.Component {
   };
 
   render() {
+    const { history } = this.props;
+    console.warn(history, "history");
     return (
       <div className="app">
         {/* logo */}
@@ -76,7 +78,7 @@ class App extends React.Component {
               }}
             />
             <Icon
-              type="icon-account"
+              type="icon-Daytimemode"
               className="user-icon"
               title="关于我"
               onClick={() => {
@@ -96,18 +98,24 @@ class App extends React.Component {
             <Route exact path="/mine" component={AsyncMine} />
           </Switch>
         </div>
-        {/* 底部 */}
-        {
-          <div className="app-footer">
+        {/* 返回居中显示 */}
+        {history.location.pathname !== "/" && (
+          <div className="app-back">
             <Icon
               type="icon-yooxi"
               className="footer-icon"
               title="返回"
+              noTip
               onClick={() => {
-                const { history } = this.props;
                 history.go(-1);
               }}
             />
+          </div>
+        )}
+
+        {/* 底部 */}
+        {
+          <div className="app-footer">
             <Icon
               type="icon-top"
               className="footer-icon"

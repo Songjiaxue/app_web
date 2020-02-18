@@ -1,58 +1,36 @@
 @import '../../assets/less/color';
 .app-mine{
-  .app-title{
-    margin-bottom: 1rem;
+  width: 80%;
+  margin: 0 auto;
+  &-item{
+    margin-bottom: .2rem;
   }
-  &-main{
-    width: 60%;
-    margin: 0 auto;
-    // background-color: fade(@text-color,2%);
-    padding: .4rem;
+  &-title{
+    font-weight: bold;
     display: flex;
-    p{
-      line-height: 2;
-    }
-    >div{
-      flex: 1;
-    }
-    .main-title{
-      font-weight: bold;
-      text-align: center;
-      margin-bottom: .3rem;
-    }
-    .main-left{
-      box-shadow: 1px 0 0 0 fade(@text-color, 20%);
-      &-in{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        .img-wrap{
-          border-radius: 50%;
-          width: 1rem;
-          height: 1rem;
-          overflow: hidden;
-          margin-right: .5rem;
-          img{
-            width: 100%;
-          }
-        }
-        
-        .label{
-          font-weight: bold;
-          margin-right: .2rem;
-        }
-      }
-    }
-    .main-right{
-      &-in{
-        padding: 0 .4rem;
-      }
-      p{
-        display: flex;
-        align-items: center;
-        // justify-content: center;
-      }
-    }
+    align-items: center;
     
   }
+  .mine-item{
+    width: 25%;
+    display: inline-block;
+    padding: .2rem;
+    img{
+      height: 2rem;
+    }
+    .desc{
+      text-align: center;
+      margin-top: .1rem;
+    }
+  }
+  .plan-item{
+    margin: .1rem 1em;
+    display: flex;
+    align-items: center;
+    &:before{
+      .c-circle();
+    }
+  }
+
+  
 }

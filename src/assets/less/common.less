@@ -7,6 +7,9 @@ body {
 	margin: 0;
 	color: @text-color;
 	background-color: @bg-color;
+	img{
+		width: 100%;
+	}
 	.app{
 		padding: .2rem;
 		p{
@@ -27,12 +30,7 @@ body {
 				justify-content: center;
 			}
 			.sub:before,.sub:after{
-				content: '';
-				display: inline-block;
-				border-radius: 50%;
-				background-color: @text-color;
-				margin: 0 .2rem;
-				padding: .04rem;
+				.c-circle();
 			}
 			.desc{
 				border: 1px solid fade(@text-color, 50%);
@@ -96,8 +94,7 @@ body {
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			margin-top: 1rem;
-			margin-bottom: .5rem;
+			margin: .5rem;
 			text-align: center;
 			cursor: pointer;
 		}
