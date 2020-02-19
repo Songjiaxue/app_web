@@ -1,11 +1,16 @@
 import React from "react";
+import { Spin } from "antd";
 // import { Toast, } from 'antd-mobile';
 import "./index.less";
 
 export default ({ isLoading, error }) => {
   // Handle the loading state
   if (isLoading) {
-    return <div />;
+    return (
+      <div className="loading-box">
+        <Spin />
+      </div>
+    );
   }
   // Handle the error state
   if (error) {
