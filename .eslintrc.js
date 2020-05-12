@@ -46,6 +46,7 @@ module.exports = {
     "no-multi-spaces": 0,
     "react/jsx-no-target-blank": 0,
 		"react/no-array-index-key": 0,
-		"no-plusplus":0
+    "no-plusplus":0,
+    "no-return-assign": 0
   },
 };

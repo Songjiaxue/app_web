@@ -10,10 +10,8 @@
     flex-wrap: wrap;
     .item{
       padding: .5rem .4rem;
-      flex: 1;
+      flex: 0 1 25%;
       cursor: pointer;
-      max-width: 25%;
-      min-width: 25%;
       &-wrap{
         border: 1px solid fade(@text-color, 50%);
         padding: 1rem 0 .6rem;
@@ -75,6 +73,24 @@
           .in{
             background-color: @warn-color;
           }
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1500px){
+  .app-work{
+    &-main{
+      .item{
+        flex: 0 1 20%;
+        .border-top .space{
+          width: .2rem;
+        }
+      }
+      .item-wrap{
+        padding: 1rem 0 .4rem;
+        img{
+          margin-top: .4rem;
         }
       }
     }

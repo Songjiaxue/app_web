@@ -12,7 +12,7 @@ class AppHome extends React.Component {
 
   goPage = () => {
     const { history } = this.props;
-    history.push("/work");
+    history.push("/works");
   };
 
   render() {

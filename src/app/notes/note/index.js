@@ -67,7 +67,7 @@ class AppNote extends Component {
           ],
         },
         3: {
-          title: "乱七八糟的一些笔记",
+          title: "关于react的一些笔记",
           list: [
             {
               title: "React + antd + webpack打包优化，首屏加载优化",
@@ -81,9 +81,39 @@ class AppNote extends Component {
               link: "https://juejin.im/post/5c74d9636fb9a049e93d621b",
             },
             {
+              title: "模拟react虚拟节点转换真实节点",
+              content: [
+                "ReactDom.render(vnode,container) => React.createElement(vnode) => container.appendChild(node)",
+                "jsx转译 => 转换为真实节点",
+              ],
+              link: "https://juejin.im/post/5ea2b8bff265da47ed180ee0",
+            },
+            {
+              title: "react模拟弹窗组件",
+              content: [
+                "Portal 提供了一种将子节点渲染到存在于父组件以外的 DOM 节点的优秀的方案。",
+                "React.createPortal(child,container)",
+                "第一个参数（child）是任何可渲染的 React 子元素，例如一个元素，字符串或 fragment。",
+                "第二个参数（container）是一个 DOM 元素。",
+              ],
+            },
+          ],
+        },
+        4: {
+          title: "乱七八糟的一些笔记",
+          list: [
+            {
               title: "轻量应用服务器（centOS）+express+mysql搭建个人网站",
               content: ["工具准备：轻量服务器，SQlyog，xshell"],
               link: "https://juejin.im/post/5de470a56fb9a07164727a9b",
+            },
+            {
+              title: "xss攻击和csrf攻击",
+              content: [
+                "xss攻击: 跨站脚本攻击（Cross Site Scripting），是说攻击者通过注入恶意的脚本，在用户浏览网页的时候进行攻击，比如获取cookie，或者其他用户身份信息。",
+                "csrf攻击: 跨站点请求伪造（Cross—Site Request Forgery），攻击者盗用了你的身份，以你的名义发送恶意请求，对服务器来说这个请求是完全合法的，但是却完成了攻击者所期望的一个操作，比如以你的名义发送邮件、发消息，盗取你的账号，添加系统管理员，甚至于购买商品、虚拟货币转账等。",
+              ],
+              link: "https://juejin.im/post/5e8d6a99e51d4546e2637cbb",
             },
             {
               title: "0.1 + 0.2 === 0.3?",

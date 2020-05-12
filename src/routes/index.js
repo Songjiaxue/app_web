@@ -70,19 +70,22 @@ export default [
     header: {
       title: "MY NOTES",
       subTitle: "我的笔记",
-      desc: "css、javascript、乱七八糟的一些分享",
+      desc: "css、javascript、react、乱七八糟的一些分享",
     },
-  },
-  {
-    path: "/notes/:type",
-    component: AsyncNote,
-    header: {
-      desc: {
-        1: "关于css的一些笔记",
-        2: "关于javascript的一些笔记",
-        3: "乱七八糟的一些笔记",
+    children: [
+      {
+        path: "/notes/:type",
+        component: AsyncNote,
+        header: {
+          desc: {
+            1: "关于css的一些笔记",
+            2: "关于javascript的一些笔记",
+            3: "关于react的一些笔记",
+            4: "乱七八糟的一些笔记",
+          },
+        },
       },
-    },
+    ],
   },
   {
     path: "/mine",

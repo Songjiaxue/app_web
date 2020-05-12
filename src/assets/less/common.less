@@ -38,25 +38,22 @@ body {
 				padding: .02rem .8rem;
 			}
 		}
-		&-footer{
-			position: fixed;
-			bottom: 20px;
-			right: 20px;
-			display: flex;
-			flex-direction: column;
-			height: 100px;
-			.icon{
-				flex: 1;
-			}
-		}
+		// &-footer{
+		// 	position: fixed;
+		// 	bottom: 20px;
+		// 	right: 20px;
+		// 	display: flex;
+		// 	flex-direction: column;
+		// 	height: 100px;
+		// 	.icon{
+		// 		flex: 1;
+		// 	}
+		// }
 		&-logo{
 			font-size: .2rem;
 			text-transform: uppercase;  
 			font-weight: bold;
 			color: @text-color;
-			position: fixed;
-			top: 20px;
-			left: 20px;
 		}
 		.icon {
 			width: 1.6em; height: 1.6em;
@@ -67,28 +64,28 @@ body {
 			display: inline-block;
 	 }
 	 	&-fixed{
-		position: fixed;
-		left:.2rem;
-		top: 40%;
-		transform: translate(0, -50%);
-		.icon{
-			display: block;
-		}
-		.icon:not(:first-child){
-			margin-top: .1rem;
-		}
-		.home-icon{
-			color: @home-color;
-		}
-		.work-icon{
-			color: @work-color;
-		}
-		.collection-icon{
-			color: @collection-color;
-		}
-		.user-icon{
-			color: @user-color;
-		}
+			position: fixed;
+			left:.2rem;
+			top: 40%;
+			transform: translate(0, -50%);
+			.icon{
+				display: block;
+			}
+			.icon:not(:first-child){
+				margin-top: .1rem;
+			}
+			.icon:first-child .icon{
+				color: @home-color;
+			}
+			.icon:nth-child(2) .icon{
+				color: @work-color;
+			}
+			.icon:nth-child(3) .icon{
+				color: @collection-color;
+			}
+			.icon:nth-child(4) .icon{
+				color: @user-color;
+			}
 		}
 		&-back{
 			display: flex;

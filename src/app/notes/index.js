@@ -12,6 +12,9 @@ class AppNotes extends Component {
       title: "javascript",
     },
     3: {
+      title: "react",
+    },
+    4: {
       title: "other",
     },
   };
