@@ -12,11 +12,6 @@ class Dingdangmao extends Component {
   render() {
     return (
       <div className="app-works">
-        <div className="app-title">
-          <div className="main">MY WORK</div>
-          <div className="sub">我的作品</div>
-          <div className="desc">纯css绘制哆啦a梦</div>
-        </div>
         <div className="app-works-main">
           <div className="main-left">
             <div className="title">关键实现</div>

@@ -24,5 +24,6 @@ module.exports = override(
     "@app": path.resolve(__dirname, "src/app"),
     "@components": path.resolve(__dirname, "src/components"),
     "@util": path.resolve(__dirname, "src/util"),
+    "@routes": path.resolve(__dirname, "src/routes"),
   }),
 );

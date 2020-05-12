@@ -1,105 +1,124 @@
 import React from "react";
 import { Route, Switch, withRouter } from "react-router-dom";
-import Loadable from "react-loadable";
-import LoadingComponent from "@components/loading-component";
 import Icon from "@components/icon";
-
-// 首页
-const AsyncHome = Loadable({
-  loader: () => import("@app/home"),
-  loading: LoadingComponent,
-  delay: 300,
-});
-const AsyncWork = Loadable({
-  loader: () => import("@app/work"),
-  loading: LoadingComponent,
-  delay: 300,
-});
-const AsyncNotes = Loadable({
-  loader: () => import("@app/notes"),
-  loading: LoadingComponent,
-  delay: 300,
-});
-const AsyncWorks = Loadable({
-  loader: () => import("@app/work/works"),
-  loading: LoadingComponent,
-  delay: 300,
-});
-const AsyncNote = Loadable({
-  loader: () => import("@app/notes/note"),
-  loading: LoadingComponent,
-  delay: 300,
-});
-const AsyncMine = Loadable({
-  loader: () => import("@app/mine"),
-  loading: LoadingComponent,
-  delay: 300,
-});
+import Routes from "@routes/index";
 
 @withRouter
 class App extends React.Component {
-  goPage = path => {
+  constructor(props) {
+    super(props);
+    console.log(props, "ppp");
+  }
+
+  goPage = (path, state = {}) => {
     const { history } = this.props;
-    history.push(path);
+    history.push({
+      pathname: path,
+      state,
+    });
+  };
+
+  // 递归找到当前路由项
+  findRoute = routes => {
+    const { history } = this.props;
+    const {
+      location: { pathname },
+    } = history;
+    for (let i = 0; i < routes.length; i++) {
+      let { path } = routes[i];
+      const { children } = routes[i];
+      if (pathname === "/") {
+        return routes[i];
+      }
+      // 如果是带参path
+      if (path.indexOf(":") > -1) {
+        path = path.replace(/:(\w+)/, "");
+      }
+      // 优先匹配子项
+      if (children) {
+        const childRoute = this.findRoute(children);
+        if (childRoute) {
+          const pathnameLast = pathname.split("/").reverse();
+          const last = pathnameLast[0];
+          return {
+            ...childRoute,
+            // 合并header的desc
+            header: routes[i].header
+              ? {
+                  ...routes[i].header,
+                  desc: (childRoute.header.desc || {})[last],
+                }
+              : null,
+          };
+        }
+      }
+      if (path !== "/" && pathname.indexOf(path) > -1) {
+        return routes[i];
+      }
+    }
+    return null;
+  };
+
+  // 递归遍历生成路由
+  renderRoutes = routes => {
+    let arr = [];
+    routes.forEach(item => {
+      if (item.children) {
+        const childs = this.renderRoutes(item.children);
+        console.log(childs);
+        arr = [...arr, ...childs];
+      }
+      arr.push(
+        <Route
+          exact
+          path={item.path}
+          component={item.component}
+          key={item.path}
+        />,
+      );
+    });
+    return arr;
   };
 
   render() {
     const { history } = this.props;
-    console.warn(history, "history");
+    const route = this.findRoute(Routes) || {};
+    console.log(this.renderRoutes(Routes), "ooo");
     return (
       <div className="app">
         {/* logo */}
         <div className="app-logo">tomato-or-potato</div>
+        {route.header && (
+          <div className="app-title">
+            <div className="main">{route.header.title}</div>
+            <div className="sub">{route.header.subTitle}</div>
+            <div className="desc">{route.header.desc}</div>
+          </div>
+        )}
         {/* 导航 */}
         <div className="app-fixed">
           <div className="fixed-item">
-            <Icon
-              type="icon-store"
-              className="home-icon"
-              title="首页"
-              onClick={() => {
-                this.goPage("/");
-              }}
-            />
-            <Icon
-              type="icon-pic"
-              className="work-icon"
-              title="作品"
-              onClick={() => {
-                this.goPage("/work");
-              }}
-            />
-            <Icon
-              type="icon-collection"
-              className="collection-icon"
-              title="笔记"
-              onClick={() => {
-                this.goPage("/notes");
-              }}
-            />
-            <Icon
-              type="icon-Daytimemode"
-              className="user-icon"
-              title="关于我"
-              onClick={() => {
-                this.goPage("/mine");
-              }}
-            />
+            {Routes.map(
+              v =>
+                v.icon && (
+                  <Icon
+                    type={v.icon}
+                    key={v.icon}
+                    title={v.title}
+                    onClick={() => {
+                      this.goPage(v.path);
+                    }}
+                  />
+                ),
+            )}
           </div>
         </div>
         {/* 内容导航 */}
         <div className="app-main">
-          <Switch>
-            <Route exact path="/" component={AsyncHome} />
-            <Route exact path="/work" component={AsyncWork} />
-            <Route exact path="/notes" component={AsyncNotes} />
-            <Route exact path="/notes/:type" component={AsyncNote} />
-            <Route exact path="/work/:id" component={AsyncWorks} />
-            <Route exact path="/mine" component={AsyncMine} />
-          </Switch>
+          <Switch>{this.renderRoutes(Routes)}</Switch>
         </div>
         {/* 返回居中显示 */}
-        {history.location.pathname !== "/" && (
+        {!route.icon && (
           <div className="app-back">
             <Icon
               type="icon-yooxi"

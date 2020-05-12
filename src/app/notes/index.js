@@ -24,13 +24,6 @@ class AppNotes extends Component {
   render() {
     return (
       <div className="app-notes">
-        <div className="app-title">
-          <div className="main">MY NOTES</div>
-          <div className="sub">我的笔记</div>
-          <div className="desc">
-            <span>css、javascript、react技术栈</span>
-          </div>
-        </div>
         <div className="app-notes-main">
           {Object.keys(this.types).map(v => (
             <div

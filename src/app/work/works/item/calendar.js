@@ -12,13 +12,6 @@ class Dingdangmao extends Component {
   render() {
     return (
       <div className="app-works">
-        <div className="app-title">
-          <div className="main">MY WORK</div>
-          <div className="sub">我的作品</div>
-          <div className="desc">
-            <span>日历组件，支持额外的日期标点，以及选中日期高亮</span>
-          </div>
-        </div>
         <div className="app-works-main">
           <div className="main-left">
             <div className="title">关键实现</div>

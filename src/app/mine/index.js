@@ -88,13 +88,6 @@ class AppMine extends PureComponent {
     const { acgList, singerList, thingList } = this.state;
     return (
       <div className="app-mine">
-        <div className="app-title">
-          <div className="main">ABOUT ME</div>
-          <div className="sub">关于我</div>
-          <div className="desc">
-            <span>好好学习，拯救地球</span>
-          </div>
-        </div>
         <div className="app-mine-main">
           <Tabs defaultActiveKey="1">
             <Tabs.TabPane tab="PLAN" key="1">

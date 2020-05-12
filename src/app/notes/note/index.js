@@ -110,13 +110,6 @@ class AppNote extends Component {
     const { type, typeInfo } = this.state;
     return (
       <div className="app-note">
-        <div className="app-title">
-          <div className="main">MY NOTES</div>
-          <div className="sub">我的笔记</div>
-          <div className="desc">
-            <span>{typeInfo[type].title}</span>
-          </div>
-        </div>
         <div className="app-note-main">
           {typeInfo[type].list.map((v, t) => (
             <div className="item" key={t}>

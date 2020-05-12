@@ -67,11 +67,6 @@ class AppWork extends Component {
     const { list } = this.state;
     return (
       <div className="app-work">
-        <div className="app-title">
-          <div className="main">MY WORK</div>
-          <div className="sub">我的作品</div>
-          <div className="desc">react技术栈、vue技术栈、expressjs技术栈</div>
-        </div>
         <div className="app-work-main">
           {list.map((v, key) => (
             <div
@@ -81,7 +76,7 @@ class AppWork extends Component {
               onClick={() => {
                 this.goPage({
                   link: v.link,
-                  path: `/work/${key + 1}`,
+                  path: `/works/${key + 1}`,
                   type: v.type,
                 });
               }}
